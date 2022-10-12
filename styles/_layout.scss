@@ -1,0 +1,14 @@
+@use "./helpers/media" as media;
+
+@layer utils {
+  .container {
+    margin-inline: var(--size-fluid-1);
+    @include media.ScreenMediumUp {
+      margin-inline: var(--size-fluid-2);
+    }
+  }
+
+  .v-gap-1 {
+    margin-top: 160px;
+  }
+}

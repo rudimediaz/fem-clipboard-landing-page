@@ -1,0 +1,12 @@
+@use "sass:color";
+
+@function hoverify($base_color: #fff) {
+  @return color.adjust(
+    $base_color,
+    $saturation: -10%,
+    $lightness: 10%
+  );
+}
+
+$teal: hsl(171 66% 30%);
+$pastel_blue: hsl(233 100% 60%);

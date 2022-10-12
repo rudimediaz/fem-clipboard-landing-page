@@ -1,0 +1,35 @@
+@layer components {
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    border-radius: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  %btn-primary {
+    color: #fff;
+    --_shade: unset;
+    --_hover-shade: unset;
+    background-color: var(--_shade);
+    border: 1pt solid var(--_shade);
+    box-shadow: var(--shadow);
+
+    &:hover {
+      background-color: var(--_hover-shade, --_shade);
+    }
+  }
+
+  .btn-primary {
+    @extend %btn-primary;
+    --_shade: var(--clr-primary-1);
+    --_hover-shade: var(--clr-primary-ds-1);
+  }
+
+  .btn-primary-alt {
+    @extend %btn-primary;
+    --_shade: var(--clr-primary-2);
+    --_hover-shade: var(--clr-primary-ds-2);
+  }
+}

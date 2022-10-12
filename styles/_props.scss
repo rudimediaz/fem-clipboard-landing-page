@@ -1,0 +1,31 @@
+@use "./helpers/colors" as c;
+
+$desaturate_teal: c.hoverify(c.$teal);
+$desaturate_pastel_blue: c.hoverify(c.$pastel_blue);
+
+:root {
+  --clr-primary-2: #{c.$teal};
+  --clr-primary-1: #{c.$pastel_blue};
+  --clr-primary-ds-2: #{$desaturate_teal};
+  --clr-primary-ds-1: #{$desaturate_pastel_blue};
+  --clr-n-2: hsl(212 10% 33%);
+  --clr-n-1: hsl(201 11% 44%);
+  --size-fluid-1: clamp(1rem, 2vw, 1.5rem);
+  --size-fluid-2: clamp(5rem, 7vw, 7.5rem);
+
+  //   shadow
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+  --shadow: 0 -2px 5px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 1px 1px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 3%)),
+    0 2px 2px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 4%)),
+    0 9px 9px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 5%)),
+    0 16px 16px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 6%));
+}

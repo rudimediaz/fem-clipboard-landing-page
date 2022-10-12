@@ -1,0 +1,39 @@
+$medium: 768px;
+$small: 480px;
+$large: 1024px;
+
+@mixin ScreenMediumUp {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin ScreenMediumDown {
+  @media (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin ScreenLargeDown {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin ScreenMediumOnly {
+  @media (min-width: $medium) and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin ScreenSmallUp {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin ScreenSmallDown {
+  @media (max-width: $small) {
+    @content;
+  }
+}
